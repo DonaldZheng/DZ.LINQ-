@@ -17,9 +17,10 @@ namespace PracticeProblemsLINQ
         public static List<string> RunProblem1(List<string> words)
         {
             //code
+            var searchForTH = words.Where(w => w.Contains("th")).ToList();
 
             //return
-
+            return searchForTH;
         }
         #endregion
 
