@@ -44,8 +44,10 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem3(List<Customer> customers)
         {
             //code
+            var returnNameMike = customers.Find(c => c.FirstName == returnNameMike);
 
             //return
+            return returnNameMike;
 
         }
         #endregion
@@ -68,7 +70,8 @@ namespace PracticeProblemsLINQ
             .Select(c => { c.LastName = lastName; return c; })
             .ToList();
 
-            return null;
+            //return
+            return null; //is this needed when return is already done in select?
 
 
             //stackoverflow: it return a new collection and update value in a list using LINQ
@@ -76,7 +79,7 @@ namespace PracticeProblemsLINQ
             // .Select (w => {w.Marks = 35; return w})
             //.ToList
 
-            //return
+            
 
         }
         #endregion
