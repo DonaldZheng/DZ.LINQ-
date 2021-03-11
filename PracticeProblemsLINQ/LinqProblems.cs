@@ -30,8 +30,10 @@ namespace PracticeProblemsLINQ
         public static List<string> RunProblem2(List<string> names)
         {
             //code
+            var removeDuplicate = names.Distinct().ToList();
 
             //return
+            return removeDuplicate;
 
         }
         #endregion
@@ -55,6 +57,11 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem4(List<Customer> customers)
         {
             //code
+            Console.WriteLine("Please enter updated first name");
+            string firstName = Console.ReadLine();
+
+            Console.WriteLine("Please enter updated last name");
+            string lastName = Console.ReadLine();
 
             //return
 
