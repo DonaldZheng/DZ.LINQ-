@@ -17,7 +17,7 @@ namespace PracticeProblemsLINQ
         public static List<string> RunProblem1(List<string> words)
         {
             //code
-            var searchForTH = words.Where(w => w.Contains("th")).ToList();
+            var searchForTH = words.Where(w => w.Contains("th")).ToList(); // JJ notes: var wordsThatContainTh = words.Where(FILL IN THE LOGIC HERE!).ToList() 
 
             //return
             return searchForTH;
@@ -30,7 +30,7 @@ namespace PracticeProblemsLINQ
         public static List<string> RunProblem2(List<string> names)
         {
             //code
-            var removeDuplicate = names.Distinct().ToList();
+            var removeDuplicate = names.Distinct().ToList(); //Distinct removes duplicate in List 
 
             //return
             return removeDuplicate;
@@ -62,6 +62,19 @@ namespace PracticeProblemsLINQ
 
             Console.WriteLine("Please enter updated last name");
             string lastName = Console.ReadLine();
+
+            customers.Where(c => c.Id == 3)
+            .Select(c => { c.FirstName = firstName; return c; })
+            .Select(c => { c.LastName = lastName; return c; })
+            .ToList();
+
+            return null;
+
+
+            //stackoverflow: it return a new collection and update value in a list using LINQ
+            // .Where 
+            // .Select (w => {w.Marks = 35; return w})
+            //.ToList
 
             //return
 
